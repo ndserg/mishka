@@ -1,0 +1,33 @@
+{
+  "name": "mishka",
+  "version": "1.0.0",
+  "description": "Личный проект «Мишка» от HTML Academy",
+  "author": "Denis Natalevich",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "stylelint": "^14.14.1",
+    "stylelint-config-htmlacademy": "^1.1.2"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp styles",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "engines": {
+    "node": ">=16.17.0"
+  }
+}
