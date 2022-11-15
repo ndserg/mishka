@@ -1,0 +1,32 @@
+.contacts__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.contacts__list {
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+  color: @dark-grey;
+}
+
+.contacts__item {
+  display: flex;
+}
+
+.contacts__email-link {
+  font: inherit;
+  color: inherit;
+  text-decoration-color: @green-underline;
+  text-underline-offset: 5px;
+}
+
+.contacts__email-link:hover {
+  color: @green-underline-hover;
+  text-decoration-color: @green-underline-hover;
+}
+
+.contacts__email-link:active {
+  text-decoration-color: fade(@green-underline-hover, 10%);
+}
