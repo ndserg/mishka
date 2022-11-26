@@ -1,6 +1,28 @@
-.page-order__promo-text {
-  padding: 0;
-  font-size: 13px;
-  line-height: 24px;
-  color: @dark-grey;
+.page-order {
+  margin-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.page-order__header {
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 98px;
+  }
+}
+
+.page-order_wrapper {
+  @media (max-width: @mobile-width-max) {
+    width: @mobile-width;
+    margin: 0 auto;
+    padding-right: @mobile-padding;
+    padding-left: @mobile-padding;
+  }
 }

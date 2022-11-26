@@ -1,6 +1,115 @@
+.page-main {
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 105px;
+  }
+}
+
+.page-main__header {
+  margin-bottom: 31px;
+  padding-top: 73px;
+  background-color: @base-background;
+  background-image: url("/img/backgrounds/hero-mobile@2x\ 1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+    padding-top: 155px;
+    background-image: url("/img/backgrounds/hero-desktop\ 2.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
+    background-image: url("/img/backgrounds/hero-desktop\ 1.jpg");
+  }
+}
+
 .page-main__title {
-  margin: 0;
+  margin: 0 auto;
+  width: @mobile-width;
+  margin-bottom: 137px;
+  padding-right: 30px;
+  padding-left: 30px;
   font-size: 27px;
   font-weight: bold;
   line-height: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin-bottom: 372px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    margin-bottom: 360px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.page-main__nav {
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin: 0 auto;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.page-main__top-sales {
+  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 68px;
+  }
+}
+
+.page-main__about {
+  margin-bottom: 58px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 90px;
+    padding-right: @desktop-custom-padding;
+    padding-left: @desktop-custom-padding;
+  }
+}
+
+.page-main__reviews {
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
+    padding-left: @desktop-custom-padding;
+  }
+}
+
+.page-main__contacts {
+  @media (min-width: @desktop-width) {
+    padding-left: @desktop-custom-padding;
+  }
 }

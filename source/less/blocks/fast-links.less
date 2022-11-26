@@ -1,14 +1,47 @@
 .fast-links__list {
   .list-reset;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.fast-links__item--left {
+  background-color: @base-green;
+}
+
+.fast-links__item--right {
+  background-color: @dark-green;
 }
 
 .fast-links__link {
   display: block;
-  font-size: 20px;
+  width: @mobile-width;
+  margin: 0 auto;
+  min-height: 103px;
+  padding-top: 20px;
+  padding-right: 180px;
+  padding-bottom: 30px;
+  padding-left: @mobile-padding;
+  font-size: 19px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 24px;
   color: @base-white;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    min-height: 119px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 310px;
+  }
 }
 
 .fast-links__link--left {

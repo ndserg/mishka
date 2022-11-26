@@ -1,0 +1,85 @@
+.form-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid @base-green;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin: 0 auto;
+    padding-left: 217px;
+    padding-right: @tablet-padding;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding-right: @desktop-custom-padding;
+    padding-left: @desktop-custom-padding;
+  }
+}
+
+.form-group__title {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: normal;
+  text-transform: uppercase;
+  color: @base-green;
+}
+
+.form-group__label,
+.form-group__text-field,
+.form-group__text-field::placeholder,
+.form-group__textarea,
+.form-group__textarea::placeholder {
+  padding: 0;
+  font-size: 17px;
+  line-height: 20px;
+  color: inherit;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
+}
+
+.form-group__label,
+.form-group__text-field,
+.form-group__text-field::placeholder {
+  line-height: 52px;
+}
+
+.form-group__label {
+  font-weight: bold;
+}
+
+.form-group__text-field {
+
+  background-color: transparent;
+  border: none;
+  box-shadow: inset 0 -2px 0 @base-black;
+  outline: none;
+}
+
+.form-group__text-field:hover,
+.form-group__text-field:active,
+.form-group__text-field:focus {
+  box-shadow: inset 0 -2px 0 @green-underline;
+}
+
+.form-group__text-field::placeholder,
+.form-group__textarea::placeholder {
+  color: fade(@base-black, 30%);
+}
+
+.form-group__textarea {
+  width: 100%;
+  min-height: 142px;
+  border: 2px solid @dark-grey;
+  outline: none;
+}
+
+.form-group__textarea:hover,
+.form-group__textarea:active,
+.form-group__textarea:focus {
+  border: 2px solid @green-underline;
+}

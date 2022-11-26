@@ -1,0 +1,32 @@
+.extra-nav__list {
+  .list-reset;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.extra-nav__item {
+  padding-right: 60px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.extra-nav__link {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: fade(@base-black, 60%);
+  }
+
+  &:active {
+    color: fade(@base-black, 30%);
+  }
+}

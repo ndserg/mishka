@@ -26,6 +26,28 @@ img {
   overflow: hidden;
 }
 
+// container
+.container() {
+  width: @mobile-width;
+  margin: 0 auto;
+  padding-right: @mobile-padding;
+  padding-left: @mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding-right: @tablet-padding;
+    padding-left: @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.container {
+  .container;
+}
+
 //list-reset
 .list-reset() {
   margin: 0;

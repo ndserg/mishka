@@ -1,18 +1,33 @@
-.cart__button {
-  padding: 0;
+.cart__link {
+  display: block;
+  width: @mobile-width;
+  margin: 0 auto;
+  padding-right: @mobile-padding;
+  min-height: 79px;
+  padding-left: 76px;
   font-family: inherit;
   font-size: 17px;
-  line-height: 24px;
   font-weight: bold;
   color: inherit;
+  text-decoration: none;
+  line-height: 79px;
+  text-align: left;
   border: none;
   background: none;
-}
 
-.cart__button:hover {
-  color: fade(@base-black, 60%);
-}
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    line-height: 88px;
+    text-align: right;
+  }
 
-.cart__button:active {
-  color: fade(@base-black, 30%);
+  &:hover {
+    color: fade(@base-black, 60%);
+  }
+
+  &:active {
+    color: fade(@base-black, 30%);
+  }
 }
