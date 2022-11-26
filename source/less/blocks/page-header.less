@@ -1,11 +1,103 @@
+.page-header {
+  width: 100%;
+  border-bottom: 1px solid fade(@base-black, 10%);
+}
+
+.page-hader__wrapper {
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin: 0 auto;
+    padding-right: @tablet-padding;
+    padding-left: @tablet-padding;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
 .page-header__logo {
-  text-decoration: none;
+  min-height: 79px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  text-align: center;
+  box-shadow: 0 1px 0 @lines-grey, inset 0 1px 0 @lines-grey;
+
+  @media (min-width: @tablet-width) {
+    width: @mobile-width;
+    text-align: left;
+    box-shadow: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    text-align: center;
+  }
 }
 
-.page-header__logo:hover {
-  opacity: 0.6;
+.page-header__nav {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 100%;
+    order: 4;
+    margin-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    order: -1;
+    margin-top: 0;
+  }
 }
 
-.page-header__logo:active {
-  opacity: 0.3;
+.page-header__search {
+  box-shadow: 0 1px 0 @lines-grey, inset 0 1px 0 @lines-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+    box-shadow: none;
+    border-right: 1px solid fade(@base-black, 10%);
+    border-left: 1px solid fade(@base-black, 10%);
+  }
+}
+
+.page-header__cart {
+  box-shadow: 0 1px 0 @lines-grey, inset 0 1px 0 @lines-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 264px;
+    box-shadow: none;
+  }
+}
+
+.page-header__promo-text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    margin-top: 24px;
+    display: inline-block;
+    order: 5;
+    line-height: 24px;
+  }
+}
+
+.page-header__extra-nav {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    top: 100%;
+    order: 4;
+    width: @mobile-width;
+    margin-top: 24px;
+  }
 }

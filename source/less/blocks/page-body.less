@@ -1,28 +1,38 @@
 .page-body {
+  margin: 0;
+  padding: 0;
+  min-width: @mobile-width;
   font-family: @base-font;
   font-size: 15px;
-  line-height: 30px;
   color: @base-black;
 }
 
 .button {
   display: block;
+  width: 100%;
   min-height: 52px;
+  margin: 0;
   padding: 14px;
   font-size: 18px;
   font-weight: bold;
   line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   color: @dark-grey;
   border: 2px solid @dark-grey;
   background-color: @base-white;
-}
 
-.button:hover {
-  color: @base-white;
-  background-color: @dark-grey;
-}
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 
-.button:active {
-  color: fade(@base-white, 30%);
+  &:hover {
+    color: @base-white;
+    background-color: @dark-grey;
+  }
+
+  &:active {
+    color: fade(@base-white, 30%);
+  }
 }

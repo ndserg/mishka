@@ -1,17 +1,28 @@
-.site-search {
+.site-search__label {
+  display: block;
+  width: @mobile-width;
+  margin: 0 auto;
+  padding-right: @mobile-padding;
+  min-height: 79px;
+  padding-left: 76px;
   font-size: 17px;
-  line-height: 24px;
+  line-height: 79px;
   font-weight: bold;
   color: inherit;
   text-decoration: none;
-}
 
-.site-search:hover {
-  color: fade(@base-black, 60%);
-}
+  @media (min-width: @tablet-width) {
+    font-size: 0;
+    line-height: 88px;
+  }
 
-.site-search:active {
-  color: fade(@base-black, 30%);
+  &:hover {
+    color: fade(@base-black, 60%);
+  }
+
+  &:active {
+    color: fade(@base-black, 30%);
+  }
 }
 
 .site-search__field {

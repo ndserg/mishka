@@ -3,94 +3,113 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мишка - интернет-магазин игрушек ручной работы</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
   <header class="page-header">
+    <div class="page-hader__wrapper">
+      <div class="page-header__logo">
+        <a href="index.html" class="logo">
+          <img src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина игрушек ручной работы - Мишка" width="86" height="35">
+        </a>
+      </div>
 
-    <a href="index.html" class="page-header__logo">
-      <img src="img/mishka-logo-mobile.svg.svg" alt="Логотип интернет-магазина игрушек ручной работы - Мишка" width="86" height="35">
-    </a>
+      <nav class="page-header__nav site-nav">
+        <button class="site-nav__toggle visually-hidden">Открыть меню</button>
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Вязание на заказ</a>
+          </li>
+        </ul>
+      </nav>
 
-    <button class="page-header__toggle">Открыть меню</button>
+      <div class="page-header__search site-search">
+        <input class="site-search__field" type="search" id="site-search">
+        <label class="site-search__label"for="site-search">Поиск по сайту</label>
+      </div>
 
-    <nav class="page-header__nav site-nav">
-      <ul class="site-nav__list">
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="order.html">Вязание на заказ</a>
-        </li>
-      </ul>
-    </nav>
+      <div class="page-header__cart cart">
+        <a class="cart__link" href="#">Корзина: пока пуста</a>
+      </div>
 
-    <div class="page-header__search site-search">
-      <input class="site-search__field" type="search" id="site-search">
-      <label for="site-search">Поиск по сайту</label>
+      <nav class="page-header__extra-nav extra-nav">
+        <ul class="extra-nav__list">
+          <li class="extra-nav__item">
+            <a class="extra-nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="extra-nav__item">
+            <a class="extra-nav__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="page-header__promo-text">Бесплатная доставка по России</p>
     </div>
-
-    <div class="page-header__cart cart">
-      <button class="cart__button">Корзина: пока пуста</button>
-    </div>
-
   </header>
 
   <main class="page-main">
-    <h1 class="page-main__title">Милые штуки ручной работы для дома</h1>
+    <header class="page-main__header">
+      <h1 class="page-main__title">Милые штуки ручной<br> работы для дома</h1>
 
-    <nav class="page-main__nav fast-links">
-      <ul class="fast-links__list">
-        <li class="fast-links__item">
-          <a class="fast-links__link fast-links__link--left" href="#">Предметы интерьера</a>
-        </li>
-        <li class="fast-links__item">
-          <a class="fast-links__link fast-links__link--right" href="#">Детские игрушки</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="page-main__nav fast-links">
+        <ul class="fast-links__list">
+          <li class="fast-links__item fast-links__item--left">
+            <a class="fast-links__link fast-links__link--left" href="#">Предметы интерьера</a>
+          </li>
+          <li class="fast-links__item fast-links__item--right">
+            <a class="fast-links__link fast-links__link--right" href="#">Детские игрушки</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <section class="features">
-      <h2 class="features__title">Вязаные корзинки</h2>
-      <b class="features__hit">Товар недели</b>
-      <div class="features__item">
-        <p class="features__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <dl class="features__list">
-          <div class="features__data">
-            <dt class="features__name">Цвет:</dt>
-            <dd class="features_description">«Тиффани»/серый</dd>
+    <section class="page-main__top-sales top-sales container">
+      <header class="top-sales__header">
+        <h2 class="top-sales__title">Вязаные корзинки</h2>
+        <b class="top-sales__hit">Товар недели</b>
+      </header>
+      <div class="top-sales__item">
+        <p class="top-sales__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <dl class="top-sales__list">
+          <div class="top-sales__data">
+            <dt class="top-sales__name">Цвет:</dt>
+            <dd class="top-sales__value">«Тиффани»/серый</dd>
           </div>
-          <div class="features__data">
-            <dt class="features__name">Диаметр:</dt>
-            <dd class="features_description">25 см</dd>
+          <div class="top-sales__data">
+            <dt class="top-sales__name">Диаметр:</dt>
+            <dd class="top-sales__value">25 см</dd>
           </div>
-          <div class="features__data">
-            <dt class="features__name">Высота:</dt>
-            <dd class="features_description">15 см</dd>
+          <div class="top-sales__data">
+            <dt class="top-sales__name">Высота:</dt>
+            <dd class="top-sales__value">15 см</dd>
           </div>
         </dl>
-        <img class="features__img" src="img/products/triple-set-mobile 1.jpg" alt="Вязаные корзинки разных цветов и размеров" width="260" height="315">
-        <p class="features__price">Цена: 990 руб.</p>
-        <button class="features__button button">Заказать</button>
+        <img class="top-sales__img" src="img/products/triple-set-mobile 1.jpg" alt="Вязаные корзинки разных цветов и размеров" width="260" height="315">
+        <p class="top-sales__price">Цена: 990 руб.</p>
+        <button class="top-sales__button button">Заказать</button>
       </div>
     </section>
 
-    <section class="about">
+    <section class="page-main__about about container">
       <h2 class="about__title">Коротко о нас:</h2>
 
       <ul class="about__list">
-        <li class="about__item">Экологически чистые материалы</li>
-        <li class="about__item">Скандинавский стиль по российской цене</li>
-        <li class="about__item">Увеличивает лайки на фотографиях</li>
-        <li class="about__item">Связано вручную с любовью и умилением</li>
+        <li class="about__item">Экологически<br> чистые материалы</li>
+        <li class="about__item">Скандинавский стиль<br> по российской цене</li>
+        <li class="about__item">Увеличивает лайки<br> на фотографиях</li>
+        <li class="about__item">Связано вручную<br> с любовью и умилением</li>
         <li class="about__item">Поддержка отечественного производителя</li>
-        <li class="about__item">Поставляется в подарочной упаковке</li>
+        <li class="about__item">Поставляется<br> в подарочной упаковке</li>
       </ul>
     </section>
 
-    <section class="reviews">
+    <section class="page-main__reviews reviews container">
       <h2 class="reviews__title">Отзывы</h2>
 
       <div class="reviews__list">
@@ -101,14 +120,14 @@
               <cite class="reviews__author-nickname">@misssssiskras</cite>
             </p>
           </blockquote>
-          <blockquote class="reviews__item">
+          <blockquote class="reviews__item visually-hidden">
             <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <p class="reviews__author">
               <span class="reviews__author-name">Екатерина Красильникова</span>
               <cite class="reviews__author-nickname">@misssssiskras2</cite>
             </p>
           </blockquote>
-          <blockquote class="reviews__item">
+          <blockquote class="reviews__item visually-hidden">
             <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <p class="reviews__author">
               <span class="reviews__author-name">Елена Красильникова</span>
@@ -124,29 +143,35 @@
       <a class="reviews__button button" href="#">Написать</a>
     </section>
 
-    <section class="contacts">
+    <section class="page-main__contacts contacts container">
       <h2 class="contacts__title">Контакты</h2>
 
       <dl class="contacts__list">
         <div class="contacts__item">
-          <dt>e-mail:</dt>
-          <dd>
+          <dt class="contacts__field-name">e-mail:</dt>
+          <dd class="contacts__field-value">
             <a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </dd>
         </div>
         <div class="contacts__item">
-          <dt>адрес:</dt>
-          <dd>г. Санкт-Петербург ул. Большая Конюшеннаяд. 19/8, офис 101</dd>
+          <dt class="contacts__field-name">адрес:</dt>
+          <dd class="contacts__field-value">г. Санкт-Петербург ул.Большая Конюшенная д. 19/8, офис 101</dd>
         </div>
       </dl>
       <div class="contacts__map">
-        <img src="img/map-mobile@1x 1.jpg" alt="Схема проезда" width="320" height="454">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1669230698084!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <a class="contacts__button button">Напишите нам</a>
     </section>
   </main>
 
   <footer class="page-footer">
+    <div class="page-footer__wrapper container">
+      <a href="index.html" class="page-footer__logo">
+        <svg width="102" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.22 21.381c-.1-2.685-.5-5.27-.5-7.956 0-2.187.4-4.375-.4-6.464 0-.199.1-.497.1-.696.2-.994-3.3-.497-3.8.497-.3.299-.5.597-.4.995 0 .1.1.199.1.298-.7 3.183-1.6 6.265-2.6 9.348-.4 1.194-.9 2.288-1.3 3.481-.6-1.094-1.2-2.188-1.6-3.381-1.4-3.381-2.6-6.862-4.3-10.144.2-1.492-3.2-1.392-3.9 0-.8 1.69-.7 3.381-.4 5.171.3 1.99.4 3.978.4 6.067 0 3.978.4 7.856.4 11.834-.4.398-.5.895-.1 1.392.2.2.4.398.6.498 1 .696 3.6.099 3.6-1.293 0-4.078-.3-8.155-.4-12.332v-1.193c.1.1.1.298.2.398.6 1.59 1.3 3.182 2.2 4.674.9 1.491 1.3 3.082 1.8 4.674-.2.199-.3.497-.2.696 0 .199.1.298.3.398.6.497 1.8.298 2.5 0 .3-.1.6-.299.8-.398.3-.2.9-.696.7-1.194 0-.099-.1-.198-.1-.298.5-1.293.7-2.585 1-3.878.3-1.393.8-2.785 1.3-4.078.1.597.1 1.194.2 1.89.2 2.585 0 5.072 0 7.558 0 .795.1 1.591.2 2.486.1.298.4 1.79.3 1.89-.8.497-.6 1.093.2 1.292.9.2 2.1-.1 2.8-.696 1.2-1.094.6-2.784.4-4.177-.5-2.386 0-4.972-.1-7.359Zm8.4.697c-.1-1.99-.8-3.879-.8-5.868 0-2.287.2-4.574-.2-6.862-.1-.696-4.1.1-3.9.995.3 2.088.2 4.177.2 6.364 0 1.99.5 3.879.7 5.868.3 2.088-.1 4.177.1 6.166.1.994.8 2.685.1 3.58-.4.497 1.5.298 1.6.298.8-.1 1.8-.398 2.3-.994.7-.796.2-2.387.1-3.382-.3-1.989-.1-4.176-.2-6.165Zm16.3-3.282c-2.1-2.785-5.9-.796-8.6-1.492-1.4-.398-1.4-2.287-1.4-3.381 0-1.393-.1-2.685-.3-4.078-.1-1.094 0-2.088.7-2.884.1-.1.9-.298.8-.298.4-.1.7-.1 1.1-.1 1.5-.099 4.6.2 4 2.487-.3.994 3.6.398 3.9-.597 1.2-4.575-7.3-3.68-9.7-3.083-2.2.597-4.6 1.79-4.8 4.376-.1 1.193.3 2.387.3 3.58.1 1.392-.2 2.785.3 4.077 1.1 2.984 5.5 1.591 7.8 1.691 3.8.298 2.7 5.47 2.7 7.856 0 1.293 1.2 3.382.2 4.476-.6.696-2 .696-2.8.795-.8.1-2.2.298-2.7-.497-1-1.392.1-3.78-.1-5.37-.1-.895-4.1-.1-3.9.994.3 2.586-1.4 6.066 2.4 6.564 2.4.298 5.2-.2 7.5-.895 1.2-.398 2.3-.895 3.2-1.79 1-.895.7-2.288.4-3.481-.5-3.083.9-6.464-1-8.95Zm17.4-.199c-.1-3.78-.7-7.459-.7-11.238 0-1.989-4-1.293-4 .298 0 3.58.5 7.16.7 10.74v.2c-1.9 0-3.9.198-5.9.198.2-4.574-.6-9.149-.4-13.823 0-.596-3.9-.1-3.9.995-.2 4.475.6 8.85.5 13.326-.1 2.088-.2 4.276-.3 6.364 0 1.094.2 2.188.3 3.282.1.995.5 2.288.2 3.282-.2.796 3.6.298 3.9-.696.5-1.79-.2-3.978-.4-5.768-.2-1.69 0-3.48.1-5.171 2-.1 4.1-.299 6.1 0 .1 1.392.2 2.784.3 4.077.1 1.193.2 2.287.2 3.48 0 .995.1 2.487-.2 3.481-.8 2.089 3.1 1.89 3.7.398.7-1.89.5-4.177.4-6.166-.2-2.486-.6-4.873-.6-7.26Zm16.9 4.376c-.9-2.785-2.4-5.171-3.6-7.757 1-1.89 2-3.878 2.9-5.867.8-1.79 1.4-3.78 3.1-5.072.6-.398.6-.895-.3-.995-.9-.1-2.1.2-2.8.696-1.4 1.293-2.4 2.685-3.1 4.376-.9 2.089-1.9 4.077-2.9 6.066-.1.1-.1.299-.2.398-.5.299-.8.796-.6 1.293-.8 1.591-1.6 3.083-2.5 4.575-.3-5.47-1-11.04-1.2-16.509 0-1.293-4-.497-3.9.995.2 6.862 1.2 13.624 1.3 20.486v.1c-.3.298-.2.497.1.596 0 1.79-.1 3.48-.2 5.27-.5.697.5 1.095 1.1 1.095h.1c.7 0 2.6-.299 2.7-1.393.2-2.088.3-4.176.2-6.265 1.6-1.69 2.9-3.58 4.1-5.569.8 1.492 1.5 2.984 2 4.575.9 2.685 2.3 5.27 3.1 7.956.5 1.79 4.5.696 3.9-.995-1-2.784-2.4-5.27-3.3-8.055Zm23.501-4.575c-.2-.795-1.4-.795-2.3-.795v-.995c-.1-2.685-.2-5.37-.4-7.956-.2-2.486-1.6-3.281-4-3.182-2.4.1-5.2.497-7.5 1.392-2.6.995-4.1 2.884-4.6 5.669-.5 2.983.2 6.166.4 9.149.2 3.48.1 6.961.1 10.442 0 .597 3.9 0 3.9-.994v-8.255c0-.795-.1-1.59-.1-2.386 1.4-.597 3.7 0 5.1.1 1.1.099 2.2-.2 3.2-.3 0 2.288.1 4.575.2 6.863 0 1.193.5 3.48-.4 4.475-.4.497 1.5.298 1.6.298.8-.1 1.8-.398 2.3-.994.9-1.094.5-3.78.4-5.072-.1-1.89-.1-3.78-.1-5.669 1.1-.199 2.4-.895 2.2-1.79Zm-14.6-.1c-.1-1.192-.2-2.485-.3-3.679-.2-2.287.1-5.569 2.3-6.961.6-.398 1.7-.298 2.4-.398 1-.199 2-.398 2.8.199 1.2.796.9 3.68.9 4.873 0 1.989.2 3.978.3 5.967-.6.1-1.1.1-1.7.1-2.3-.2-4.6-.597-6.7-.1ZM24.22 6.663c.5-.1 1-.199 1.5-.497l.2-.2c.5-.297 1-.795.7-1.391-.5-1.094-.4-2.188-.4-3.382C26.22.2 25.22 0 24.42 0c-.7.1-2.2.597-2.2 1.492 0 .994-.1 1.989.1 2.983 0 .1-.1.199-.1.398-.1.199 0 .398.1.597v.397c.1.2.2.398.4.498.6.298 1.1.298 1.5.298Z" fill="#000"/>
+        </svg>
+      </a>
       <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--instagram" href="instagram.com" aria-label="Мы в Инстаграме">
@@ -178,9 +203,10 @@
           </svg>
         </a>
       </div>
+    </div>
   </footer>
 
-  <section class="modal-order">
+  <section class="modal-order visually-hidden">
     <h2 class="visually-hidden">Страница добавления заказа</h2>
     <p class="modal-order__title">Добавить в корзину</p>
     <span class="modal-order__action-text">Выберите размер:</span>

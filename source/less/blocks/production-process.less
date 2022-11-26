@@ -1,11 +1,99 @@
+@production-padding-mobile: 34px;
+@producttion-padding-table: 42px;
+
+.production-process {
+  padding-top: 21px;
+  padding-right: @production-padding-mobile;
+  padding-left: @production-padding-mobile;
+  padding-bottom: 33px;
+  border: 1px solid @lines-grey;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-right: @producttion-padding-table;
+    padding-left: @producttion-padding-table;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 683px 80px 230px 1fr;
+    grid-template-rows: repeat(3, max-content);
+    padding: 0;
+  }
+}
+
 .production-process__title {
   margin: 0;
+  margin-bottom: 26px;
   font-size: 17px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / 4;
+    margin-bottom: 27px;
+    padding-top: 96px;
+  }
 }
 
 .production-process__description {
+  margin: 0;
+  margin-bottom: 41px;
   font-size: 13px;
   line-height: 24px;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / 4;
+    margin-bottom: 51px;
+  }
+}
+
+.production-process__video {
+  position: relative;
+  width: 260px;
+  height: 150px;
+  margin-bottom: 35px;
+  margin-right: @production-padding-mobile * -1;
+  margin-left: @production-padding-mobile * -1;
+  background-color: @lines-grey;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    width: 668px;
+    height: 455px;
+    margin-bottom: 41px;
+    margin-right: @producttion-padding-table * -1;
+    margin-left: @producttion-padding-table * -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    margin: 0;
+  }
+}
+
+.production-process__button-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.production-process__button {
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / 4;
+  }
 }
