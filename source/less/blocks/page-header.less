@@ -21,15 +21,20 @@
   }
 }
 
-.page-header__logo {
-  min-height: 79px;
+.page-header__top {
+  position: relative;
+  width: @mobile-width;
+  height: 79px;
+  margin: 0 auto;
   padding-top: 22px;
+  padding-right: @mobile-padding;
   padding-bottom: 22px;
+  padding-left:  @mobile-padding;
   text-align: center;
   box-shadow: 0 1px 0 @lines-grey, inset 0 1px 0 @lines-grey;
 
   @media (min-width: @tablet-width) {
-    width: @mobile-width;
+    height: auto;
     text-align: left;
     box-shadow: none;
   }
@@ -37,6 +42,56 @@
   @media (min-width: @desktop-width) {
     width: 280px;
     text-align: center;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  right: @mobile-padding;
+  font-size: 0;
+  line-height: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  border: none;
+  cursor: pointer;
+
+  &--open {
+    top: 32px;
+    width: 20px;
+    height: 14px;
+    background-image: url(/img/icons/menu-open.svg);
+  }
+
+  &--close {
+    top: 29px;
+    width: 21px;
+    height: 20px;
+    background-image: url(/img/icons/menu-close.svg);
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__menu {
+  @media (max-width: @mobile-width-max) {
+    &--hide {
+      display: none;
+    }
   }
 }
 
@@ -97,7 +152,7 @@
     position: absolute;
     top: 100%;
     order: 4;
-    width: @mobile-width;
+    width: 350px;
     margin-top: 24px;
   }
 }

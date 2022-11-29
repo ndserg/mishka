@@ -3,10 +3,12 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 335px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 419px;
     justify-content: flex-start;
   }
 }
@@ -17,15 +19,18 @@
   @media (min-width: @tablet-width) {
     padding-right: 34px;
     box-shadow: none;
+
+    &:nth-child(even) {
+      padding-right: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 34px;
-    padding-left: 34px;
     border-right: 1px solid fade(@base-black, 10%);
 
-    &:first-child {
-      padding-left: 0;
+    &:nth-child(even) {
+      padding-left: 34px;
+      padding-right: 34px;
     }
   }
 }

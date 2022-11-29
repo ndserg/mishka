@@ -11,14 +11,14 @@
 <body class="page-body">
   <header class="page-header">
     <div class="page-hader__wrapper">
-      <div class="page-header__logo">
+      <div class="page-header__top">
         <a href="index.html" class="logo">
           <img src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина игрушек ручной работы - Мишка" width="86" height="35">
         </a>
+        <button class="page-header__toggle page-header__toggle--nojs">Открыть меню</button>
       </div>
 
-      <nav class="page-header__nav site-nav">
-        <button class="site-nav__toggle visually-hidden">Открыть меню</button>
+      <nav class="page-header__nav site-nav site-nav page-header__menu--show">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
@@ -29,16 +29,16 @@
         </ul>
       </nav>
 
-      <div class="page-header__search site-search">
+      <div class="page-header__search site-search page-header__menu--show">
         <input class="site-search__field" type="search" id="site-search">
         <label class="site-search__label"for="site-search">Поиск по сайту</label>
       </div>
 
-      <div class="page-header__cart cart">
+      <div class="page-header__cart cart page-header__menu--show">
         <a class="cart__link" href="#">Корзина: пока пуста</a>
       </div>
 
-      <nav class="page-header__extra-nav extra-nav">
+      <nav class="page-header__extra-nav extra-nav page-header__menu--show">
         <ul class="extra-nav__list">
           <li class="extra-nav__item">
             <a class="extra-nav__link" href="#">Новые поступления</a>
@@ -49,7 +49,7 @@
         </ul>
       </nav>
 
-      <p class="page-header__promo-text">Бесплатная доставка по России</p>
+      <p class="page-header__promo-text page-header__menu--show">Бесплатная доставка по России</p>
     </div>
   </header>
 
@@ -222,5 +222,7 @@
     </div>
     <button class="modal-order__button">Заказать</button>
   </section>
+
+  <script src="js/menu.js"></script>
 </body>
 </html>
