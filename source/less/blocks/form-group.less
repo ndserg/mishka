@@ -1,12 +1,25 @@
 .form-group {
   margin: 0;
   padding: 0;
+  padding-top: 35px;
   border: none;
   border-top: 1px solid @base-green;
 
+  &--contacts {
+    position: relative;
+    padding: 0;
+    margin-bottom: 34px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    position: relative;
     width: @tablet-width;
     margin: 0 auto;
+    padding: 0;
     padding-left: 217px;
     padding-right: @tablet-padding;
     border: none;
@@ -19,22 +32,146 @@
   }
 }
 
+.form-group__item {
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 24px;
+    align-items: center;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.form-group__checkbox {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 239px 239px;
+    justify-content: space-between;
+    row-gap: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 225px);
+    justify-content: start;
+    column-gap: 10px;
+  }
+}
+
 .form-group__title {
   font-size: 17px;
   font-weight: bold;
   line-height: normal;
   text-transform: uppercase;
   color: @base-green;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 19px;
+    left: @tablet-padding;
+  }
 }
 
-.form-group__label,
-.form-group__text-field,
-.form-group__text-field::placeholder,
-.form-group__textarea,
-.form-group__textarea::placeholder {
-  padding: 0;
+.form-group__textarea {
+  width: 100%;
+  min-height: 142px;
+  padding: 17px;
   font-size: 17px;
   line-height: 20px;
+  color: inherit;
+  border: 2px solid @dark-grey;
+  outline: none;
+
+  &::placeholder {
+    color: fade(@base-black, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 2px solid @green-underline;
+  }
+}
+
+.form-group__text-field {
+  width: 100%;
+  padding: 0;
+  font-size: 17px;
+  line-height: 52px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  box-shadow: inset 0 -2px 0 @base-black;
+  outline: none;
+
+  &--contacts {
+    padding-right: 52px;
+  }
+
+  &--tel {
+    background-image: url("/img/icons/phone.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-image: url("/img/icons/phone-green.svg");
+    }
+  }
+
+  &--email {
+    background-image: url("/img/icons/email.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-image: url("/img/icons/email-green.svg");
+    }
+  }
+
+  &::placeholder {
+    color: fade(@base-black, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 17px;
+    padding-left: 17px;
+    font-size: 19px;
+
+    &--contacts {
+      padding-right: 71px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--contacts {
+      padding-right: 53px;
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2px 0 @green-underline;
+  }
+}
+
+.form-group__label {
+  padding: 0;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 18px;
   color: inherit;
 
   @media (min-width: @tablet-width) {
@@ -42,44 +179,134 @@
   }
 }
 
-.form-group__label,
-.form-group__text-field,
-.form-group__text-field::placeholder {
-  line-height: 52px;
+.label-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  margin-bottom: 11px;
+  padding-left: 61px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: auto;
+    border: 2px solid @dark-grey;
+    border-radius: 50%;
+  }
+
+  .form-group__radio:checked + &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 12px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    background-color: @green-underline;
+    border-radius: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 52px;
+    margin-bottom: 24px;
+    padding-left: 78px;
+
+    &::before {
+      width: 52px;
+      height: 52px;
+    }
+
+    .form-group__radio:checked + &::after {
+      width: 22px;
+      height: 22px;
+      left: 15px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: @green-underline;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: fade(@dark-grey, 30%);
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
-.form-group__label {
-  font-weight: bold;
-}
+.label-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  margin-bottom: 23px;
+  padding-left: 61px;
+  cursor: pointer;
 
-.form-group__text-field {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin: auto;
+    border: 2px solid @dark-grey;
+  }
 
-  background-color: transparent;
-  border: none;
-  box-shadow: inset 0 -2px 0 @base-black;
-  outline: none;
-}
+  .form-group__checkbox:checked + &::before {
+    background-image: url("/img/icons/checkobox-checked.svg");
+    background-repeat: no-repeat;
+    background-size: 23px, 16px;
+    background-position: 50%, 50%;
+  }
 
-.form-group__text-field:hover,
-.form-group__text-field:active,
-.form-group__text-field:focus {
-  box-shadow: inset 0 -2px 0 @green-underline;
-}
+  @media (min-width: @tablet-width) {
+    min-height: 52px;
+    margin-bottom: 0;
+    padding-left: 82px;
 
-.form-group__text-field::placeholder,
-.form-group__textarea::placeholder {
-  color: fade(@base-black, 30%);
-}
+    &::before {
+      width: 52px;
+      height: 52px;
+    }
 
-.form-group__textarea {
-  width: 100%;
-  min-height: 142px;
-  border: 2px solid @dark-grey;
-  outline: none;
-}
+    .form-group__checkbox:checked + &::before {
+      background-size: 32px, 22px;
+    }
+  }
 
-.form-group__textarea:hover,
-.form-group__textarea:active,
-.form-group__textarea:focus {
-  border: 2px solid @green-underline;
+  &:hover {
+    &::before {
+      border-color: @green-underline;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: fade(@dark-grey, 30%);
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }

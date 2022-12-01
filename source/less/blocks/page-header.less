@@ -23,25 +23,26 @@
 
 .page-header__top {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: @mobile-width;
   height: 79px;
   margin: 0 auto;
-  padding-top: 22px;
   padding-right: @mobile-padding;
-  padding-bottom: 22px;
   padding-left: @mobile-padding;
-  text-align: center;
   box-shadow: 0 1px 0 @lines-grey, inset 0 1px 0 @lines-grey;
 
   @media (min-width: @tablet-width) {
+    justify-content: flex-start;
     height: auto;
-    text-align: left;
+    padding: 0;
     box-shadow: none;
   }
 
   @media (min-width: @desktop-width) {
+    justify-content: center;
     width: 280px;
-    text-align: center;
   }
 }
 

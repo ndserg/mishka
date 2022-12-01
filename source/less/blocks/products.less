@@ -2,9 +2,14 @@
   .list-reset;
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    */
+    display: grid;
+    grid-template-columns: repeat(3, 316px);
+    justify-content: space-between;
+    row-gap: 30px;
   }
 }
 
@@ -12,15 +17,17 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  padding-bottom: 26px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    width: 316px;
+    //width: 316px;
     margin-bottom: 0;
   }
 
@@ -42,6 +49,8 @@
   padding-left: 28px;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
     padding-top: 27px;
     padding-right: 34px;
     padding-bottom: 25px;
@@ -50,9 +59,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     flex-grow: 1;
     padding-right: 28px;
     padding-left: 28px;
@@ -92,6 +98,10 @@
   margin-bottom: 27px;
   background-color: @lines-grey;
 
+  & img {
+    width: 100%;
+  }
+
   @media (min-width: @tablet-width) {
     width: 334px;
     height: 334px;
@@ -106,7 +116,7 @@
 
 .product-description__info {
   margin: 0;
-  padding-bottom: 17px;
+  margin-bottom: 17px;
   font-size: 13px;
   line-height: 30px;
   color: @dark-grey;
@@ -116,13 +126,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 12px;
+    margin-bottom: 12px;
   }
 }
 
 .product-description__price-info {
-  padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
   line-height: 24px;
+  border-top: 1px solid @lines-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 23px;
@@ -135,5 +152,28 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
+  }
+}
+
+.product-description__cart-button {
+  width: 21px;
+  height: 18px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  background: none;
+  border: none;
+
+  & path {
+    opacity: 0.2;
+  }
+
+  &:hover path {
+    fill: @base-green;
+    opacity: 1;
+  }
+
+  &:active path {
+    opacity: 0.3;
   }
 }

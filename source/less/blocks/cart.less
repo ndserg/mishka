@@ -1,4 +1,9 @@
+.cart {
+  align-self: center;
+}
+
 .cart__link {
+  position: relative;
   display: block;
   width: @mobile-width;
   margin: 0 auto;
@@ -17,9 +22,10 @@
 
   @media (min-width: @tablet-width) {
     width: auto;
+    min-height: auto;
     margin: 0;
     padding: 0;
-    line-height: 88px;
+    line-height: 24px;
     text-align: right;
   }
 
@@ -29,5 +35,34 @@
 
   &:active {
     color: fade(@base-black, 30%);
+  }
+}
+
+.cart__icon {
+  position: absolute;
+  top: 31px;
+  left: @mobile-padding;
+  width: 21px;
+  height: 18px;
+  opacity: 0.2;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    margin-right: 30px;
+  }
+
+  .cart__link:hover & path {
+    fill: @base-green;
+  }
+
+  .cart__link:hover & {
+    opacity: 1;
+  }
+
+  .cart__link:active & {
+    opacity: 0.3;
   }
 }
