@@ -1,13 +1,29 @@
 .social {
   .list-reset;
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-bottom: 22px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .social__item {
-  margin-right: 41px;
+  margin-right: 40px;
   font-size: 0;
   line-height: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__link:hover path {

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мишка - интернет-магазин игрушек ручной работы</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,14 +11,18 @@
 <body class="page-body">
   <header class="page-header inner-header">
     <div class="page-hader__wrapper">
-      <div class="page-header__logo">
+      <div class="page-header__top">
         <a href="index.html" class="logo">
-          <img src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина игрушек ручной работы - Мишка" width="86" height="35">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img class="logo__img" src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина игрушек ручной работы - Мишка" width="86" height="35">
+          </picture>
         </a>
+        <button class="page-header__toggle page-header__toggle--nojs">Открыть меню</button>
       </div>
 
-      <nav class="page-header__nav site-nav">
-        <button class="site-nav__toggle visually-hidden">Открыть меню</button>
+      <nav class="page-header__nav site-nav site-nav page-header__menu--show">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
@@ -28,16 +33,26 @@
         </ul>
       </nav>
 
-      <div class="page-header__search site-search">
+      <div class="page-header__search site-search page-header__menu--show">
         <input class="site-search__field" type="search" id="site-search">
-        <label class="site-search__label"for="site-search">Поиск по сайту</label>
+        <label class="site-search__label" for="site-search">
+          <svg class="site-search__icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z" fill="#000"/>
+          </svg>
+          <span>Поиск по сайту</span>
+        </label>
       </div>
 
-      <div class="page-header__cart cart">
-        <a class="cart__link" href="#">Корзина: пока пуста</a>
+      <div class="page-header__cart cart page-header__menu--show">
+        <a class="cart__link" href="#">
+          <svg class="cart__icon" width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z" fill="#000"/>
+          </svg>
+          <span>Корзина: пока пуста</span>
+        </a>
       </div>
 
-      <nav class="page-header__extra-nav extra-nav">
+      <nav class="page-header__extra-nav extra-nav page-header__menu--show">
         <ul class="extra-nav__list">
           <li class="extra-nav__item">
             <a class="extra-nav__link" href="#">Новые поступления</a>
@@ -48,7 +63,7 @@
         </ul>
       </nav>
 
-      <p class="page-header__promo-text">Бесплатная доставка по России</p>
+      <p class="page-header__promo-text page-header__menu--show">Бесплатная доставка по России</p>
     </div>
   </header>
 
@@ -68,11 +83,20 @@
               <p class="product-description__info">Рост 30 см, вес 200 г</p>
               <div class="product-description__price-info">
                 <b class="product-description__price">1 200 руб.</b>
-                <button class="product-description__cart-button">Добавить в корзину</button>
+                <button class="product-description__cart-button">
+                  <svg width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z" fill="#000"/>
+                  </svg>
+                  <span>Добавить в корзину</span>>
+                </button>
               </div>
             </section>
             <a class="product__img" href="#">
-              <img src="img/products/photo-1-mobile 1.jpg" alt="Вязаный зайчик голубого цвета" width="260" height="195">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/products/photo-1-desktop.jpg 1x, img/products/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/products/photo-1-tablet_1.jpg 1x, img/products/photo-1-tablet_1@2x.jpg 2x">
+                <img src="img/products/photo-1-mobile_1.jpg" srcset="img/products/photo-1-mobile_1@2x.jpg 2x" alt="Вязаный зайчик голубого цвета" width="260" height="195">
+              </picture>
             </a>
           </li>
           <li class="catalog__item">
@@ -83,11 +107,20 @@
               <p class="product-description__info">Диаметр 15 см, высота 10 см</p>
               <div class="product-description__price-info">
                 <b class="product-description__price">690 руб.</b>
-                <button class="product-description__cart-button">Добавить в корзину</button>
+                <button class="product-description__cart-button">
+                  <svg width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z" fill="#000"/>
+                  </svg>
+                  <span>Добавить в корзину</span>>
+                </button>
               </div>
             </section>
             <a class="product__img" href="#">
-              <img src="img/products/photo-2-mobile 1.jpg" alt="Небольшая бело-Розовая корзина с тремя свернутыми полотенцами" width="260" height="195">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/products/photo-2-desktop.jpg 1x, img/products/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/products/photo-2-tablet_1.jpg 1x, img/products/photo-2-tablet_1@2x.jpg 2x">
+                <img src="img/products/photo-2-mobile_1.jpg" srcset="img/products/photo-2-mobile_1@2x.jpg 2x" alt="Небольшая бело-Розовая корзина с тремя свернутыми полотенцами" width="260" height="195">
+              </picture>
             </a>
           </li>
           <li class="catalog__item">
@@ -98,11 +131,20 @@
               <p class="product-description__info">Диаметр 30 см, высота 30 см</p>
               <div class="product-description__price-info">
                 <b class="product-description__price">1 500 руб.</b>
-                <button class="product-description__cart-button">Добавить в корзину</button>
+                <button class="product-description__cart-button">
+                  <svg width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z" fill="#000"/>
+                  </svg>
+                  <span>Добавить в корзину</span>>
+                </button>
               </div>
             </section>
             <a class="product__img" href="#">
-              <img src="img/products/photo-3-mobile 1.jpg" alt="Большая бело-зеленая корзина с игрушками" width="260" height="195">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/products/photo-3-desktop_1.jpg 1x, img/products/photo-3-desktop_1@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/products/photo-3-tablet_1.jpg 1x, img/products/photo-3-tablet_1@2x.jpg 2x">
+                <img src="img/products/photo-3-mobile_1.jpg" srcset="img/products/photo-3-mobile_1@2x.jpg 2x" alt="Большая бело-зеленая корзина с игрушками" width="260" height="195">
+              </picture>
             </a>
           </li>
         </ul>
@@ -112,7 +154,7 @@
         <h2 class="production-process__title">Процесс производства</h2>
 
         <div class="production-process__video">
-          <video poster ="img/video-mobile 1.jpg" width="260">
+          <video width="260">
             <source src="#">
             Sorry, your browser doesn't support embedded videos, but don't worry, you can
             <a href="#">download it</a>
@@ -183,5 +225,7 @@
     </div>
     <button class="modal-order__button">Заказать</button>
   </section>
+
+  <script src="js/menu.js"></script>
 </body>
 </html>

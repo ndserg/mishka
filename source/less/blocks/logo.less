@@ -1,11 +1,14 @@
-.logo {
+/*.logo {
+  display: block;
   width: 86px;
   height: 35px;
+  margin: 0 auto;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
     width: 113px;
     height: 46px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,5 +22,40 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+*/
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo__img {
+  width: 86px;
+  height: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 113px;
+    height: 46px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: 72px;
   }
 }

@@ -10,11 +10,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
 
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 60px;
+    z-index: 1;
     justify-content: flex-start;
   }
 }
@@ -37,12 +38,15 @@
 }
 
 .top-sales__hit {
+  margin-bottom: 17px;
   font-size: 17px;
   line-height: 20px;
   color: @base-green;
 
   @media (min-width: @tablet-width) {
     width: 100px;
+    margin-top: 8px;
+    margin-bottom: 0;
     line-height: 17px;
     text-align: center;
   }
@@ -56,37 +60,35 @@
 }
 
 .top-sales__item {
+  position: relative;
+
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 292px 334px;
-    grid-template-rows: max-content 1fr max-content max-content max-content;
-    justify-content: space-between;
-    align-items: start;
     width: 100%;
     margin-top: 50px;
+    padding-right: 376px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 292px 525px;
     width: 875px;
     margin-left: auto;
+    padding-right: 583px;
   }
 }
 
 .top-sales__description {
   margin: 0;
+  margin-bottom: 28px;
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
-    grid-column: 1 / 2;
-    padding-bottom: 36px;
+    margin-bottom: 38px;
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 153px;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
+    padding-top: 150px;
   }
 }
 
@@ -95,9 +97,11 @@
   margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    grid-column: 1 / 2;
-    margin: 0;
-    padding-bottom: 57px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 90px;
   }
 }
 
@@ -127,11 +131,18 @@
   margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 5;
-    width: 100%;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 334px;
+    height: 404px;
     margin: 0;
-    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    width: 525px;
+    height: 626px;
   }
 }
 
@@ -144,7 +155,6 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    grid-column: 1 / 2;
     margin-bottom: 0;
     padding-bottom: 33px;
     font-size: 20px;
@@ -154,8 +164,4 @@
 .top-sales__button {
   width: 100%;
   text-align: center;
-
-  @media (min-width: @tablet-width) {
-    grid-column: 1 / 2;
-  }
 }

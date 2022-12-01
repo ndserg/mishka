@@ -13,7 +13,11 @@
     <div class="page-hader__wrapper">
       <div class="page-header__top">
         <a href="index.html" class="logo">
-          <img src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина игрушек ручной работы - Мишка" width="86" height="35">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img class="logo__img" src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина игрушек ручной работы - Мишка" width="86" height="35">
+          </picture>
         </a>
         <button class="page-header__toggle page-header__toggle--nojs">Открыть меню</button>
       </div>
@@ -31,11 +35,21 @@
 
       <div class="page-header__search site-search page-header__menu--show">
         <input class="site-search__field" type="search" id="site-search">
-        <label class="site-search__label"for="site-search">Поиск по сайту</label>
+        <label class="site-search__label" for="site-search">
+          <svg class="site-search__icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z" fill="#000"/>
+          </svg>
+          <span>Поиск по сайту</span>
+        </label>
       </div>
 
       <div class="page-header__cart cart page-header__menu--show">
-        <a class="cart__link" href="#">Корзина: пока пуста</a>
+        <a class="cart__link" href="#">
+          <svg class="cart__icon" width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z" fill="#000"/>
+          </svg>
+          <span>Корзина: пока пуста</span>
+        </a>
       </div>
 
       <nav class="page-header__extra-nav extra-nav page-header__menu--show">
@@ -90,7 +104,11 @@
             <dd class="top-sales__value">15 см</dd>
           </div>
         </dl>
-        <img class="top-sales__img" src="img/products/triple-set-mobile 1.jpg" alt="Вязаные корзинки разных цветов и размеров" width="260" height="315">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/products/triple-set-desktop_1.jpg 1x, img/products/triple-set-desktop-1@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/products/triple-set-tablet_1.jpg 1x, img/products/triple-set-tablet_1@2x.jpg 2x">
+          <img class="top-sales__img" src="img/products/triple-set-mobile_1.jpg" srcset="img/products/triple-set-mobile_1@2x.png 2x" alt="Вязаные корзинки разных цветов и размеров" width="260" height="315">
+        </picture>
         <p class="top-sales__price">Цена: 990 руб.</p>
         <button class="top-sales__button button">Заказать</button>
       </div>
@@ -100,12 +118,12 @@
       <h2 class="about__title">Коротко о нас:</h2>
 
       <ul class="about__list">
-        <li class="about__item">Экологически<br> чистые материалы</li>
-        <li class="about__item">Скандинавский стиль<br> по российской цене</li>
-        <li class="about__item">Увеличивает лайки<br> на фотографиях</li>
-        <li class="about__item">Связано вручную<br> с любовью и умилением</li>
-        <li class="about__item">Поддержка отечественного производителя</li>
-        <li class="about__item">Поставляется<br> в подарочной упаковке</li>
+        <li class="about__item about__item--icon-1">Экологически<br> чистые материалы</li>
+        <li class="about__item about__item--icon-2">Скандинавский стиль<br> по российской цене</li>
+        <li class="about__item about__item--icon-3">Увеличивает лайки<br> на фотографиях</li>
+        <li class="about__item about__item--icon-4">Связано вручную<br> с любовью и умилением</li>
+        <li class="about__item about__item--icon-5">Поддержка отечественного производителя</li>
+        <li class="about__item about__item--icon-6">Поставляется<br> в подарочной упаковке</li>
       </ul>
     </section>
 
@@ -137,8 +155,8 @@
       </div>
 
       <div class="reviews__toggles">
-        <button class="reviews-prev">Предыдущий отзыв</button>
-        <button class="reviews-next">Следующий отзыв</button>
+        <button class="reviews__toggle reviews__toggle--prev">Предыдущий отзыв</button>
+        <button class="reviews__toggle reviews__toggle--next">Следующий отзыв</button>
       </div>
       <a class="reviews__button button" href="#">Написать</a>
     </section>
@@ -160,6 +178,10 @@
       </dl>
       <div class="contacts__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1669230698084!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <svg class="map__pin" width="67" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M57.128 9.152c-13.096-12.203-34.211-12.203-47.306 0-13.096 12.202-13.096 31.944 0 44.147 0 0 23.653 21.627 23.653 46.627 0-25 23.653-46.627 23.653-46.627 13.095-12.104 13.095-31.945 0-44.147Z" fill="#fff"/>
+          <path d="M47.687 45.164c-.609-3.274.102-6.845 0-10.218-.101-3.77-.71-7.44-.71-11.111 0-2.977.507-6.151-.508-9.028.101-.298.101-.695.203-.992.305-1.488-4.67-.695-5.38.595-.508.397-.711.893-.508 1.29.102.099.102.198.102.397-.914 4.464-2.234 8.73-3.757 13.095a257.52 257.52 0 0 1-1.827 4.86 67.034 67.034 0 0 1-2.335-4.662c-1.928-4.762-3.756-9.623-6.09-14.186.304-2.084-4.569-1.885-5.482 0-1.117 2.38-1.015 4.762-.61 7.242.407 2.877.508 5.654.508 8.531.102 5.556.508 11.012.61 16.568-.508.595-.61 1.19-.102 1.885.203.297.507.496.812.794 1.32.992 4.974.198 4.974-1.786 0-5.754-.406-11.409-.609-17.163V29.59c.101.198.203.396.203.595.914 2.182 1.827 4.365 3.147 6.448 1.218 2.084 1.827 4.266 2.538 6.449-.305.297-.406.595-.305.992-.101.297.102.397.406.496.914.793 2.64.397 3.553 0l1.219-.596c.507-.297 1.218-.992 1.015-1.587 0-.099-.102-.297-.102-.397.71-1.785 1.015-3.571 1.422-5.456.406-1.984 1.116-3.869 1.827-5.754.101.893.101 1.687.203 2.58.304 3.57 0 7.043 0 10.614 0 1.191.101 2.282.304 3.374.102.496.508 2.48.406 2.579-.913.794-.609 1.786.508 1.984 1.32.298 2.944-.1 3.959-.992 1.624-1.389.812-3.77.406-5.754Z" fill="#6BC6B3"/>
+        </svg>
       </div>
       <a class="contacts__button button">Напишите нам</a>
     </section>
