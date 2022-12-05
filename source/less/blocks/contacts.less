@@ -14,17 +14,19 @@
   line-height: 30px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
     font-size: 43px;
     line-height: 81px;
     vertical-align: middle;
     background-image: url("/img/icons/flag.svg");
     background-repeat: no-repeat;
-    background-position: 100% 0;
+    background-position: 100% -8px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / 2;
+    margin-top: 67px;
+    margin-bottom: 24px;
     margin-left: -111px;
     padding-left: 111px;
     font-size: 53px;
@@ -56,16 +58,21 @@
 
 .contacts__item {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 73px 1fr;
   column-gap: 5px;
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 81px 1fr;
+    grid-template-columns: 74px 1fr;
     padding-right: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 77px 1fr;
+    grid-template-columns: 72px 1fr;
     padding-right: 0;
   }
 }
@@ -97,10 +104,15 @@
 .contacts__map {
   height: 495px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+  }
+
   @media (min-width: @desktop-width) {
     position: relative;
     grid-column: 3 / 4;
     grid-row: 1 / 4;
+    margin-bottom: 0;
     height: 457px;
   }
 }
@@ -141,6 +153,14 @@
     left: 230px;
     top: 146px;
     margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
   }
 }
 

@@ -35,11 +35,15 @@
     margin-right: 312px;
   }
 
-  &:hover path {
+  & svg {
+    fill: @base-black;
+  }
+
+  &:hover svg {
     fill: @dark-green-hover;
   }
 
-  &:active path {
+  &:active svg {
     fill: fade(@dark-green-hover, 30%);
   }
 }

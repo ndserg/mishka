@@ -2,10 +2,6 @@
   .list-reset;
 
   @media (min-width: @desktop-width) {
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    */
     display: grid;
     grid-template-columns: repeat(3, 316px);
     justify-content: space-between;
@@ -22,12 +18,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 54px;
     padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    //width: 316px;
     margin-bottom: 0;
   }
 
@@ -60,6 +56,7 @@
 
   @media (min-width: @desktop-width) {
     flex-grow: 1;
+    padding-bottom: 22px;
     padding-right: 28px;
     padding-left: 28px;
   }
@@ -68,12 +65,19 @@
 .product-description__title {
   margin: 0;
   margin-bottom: 6px;
-}
-
-.product-description__title a {
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
+  }
+}
+
+.product-description__title a {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
   color: inherit;
   text-decoration: none;
 
@@ -95,7 +99,7 @@
   order: -1;
   width: 260px;
   height: 195px;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
   background-color: @lines-grey;
 
   & img {
@@ -164,16 +168,17 @@
   background: none;
   border: none;
 
-  & path {
+  & svg {
+    fill: @base-black;
     opacity: 0.2;
   }
 
-  &:hover path {
+  &:hover svg {
     fill: @base-green;
     opacity: 1;
   }
 
-  &:active path {
+  &:active svg {
     opacity: 0.3;
   }
 }

@@ -26,11 +26,17 @@
   }
 }
 
-.social__link:hover path {
-  fill: @dark-green-hover;
-}
+.social__link {
+  & svg {
+    fill: @base-black;
+  }
 
-.social__link:active path {
-  fill: @dark-green-hover;
-  opacity: 0.3;
+  &:hover svg {
+    fill: @dark-green-hover;
+  }
+
+  &:active svg {
+    fill: @dark-green-hover;
+    opacity: 0.3;
+  }
 }

@@ -5,21 +5,21 @@
   line-height: 20px;
   color: inherit;
   text-decoration: none;
+
+  & svg {
+    fill: @base-green;
+  }
+
+  &:hover svg {
+    fill: @dark-green-hover;
+  }
+
+  &:active svg {
+    fill: @dark-green-hover;
+    opacity: 0.3;
+  }
 }
 
 .copyright__link b {
   margin-right: 27px;
-}
-
-.copyright__link path {
-  fill: @base-green;
-}
-
-.copyright__link:hover path {
-  fill: @dark-green-hover;
-}
-
-.copyright__link:active path {
-  fill: @dark-green-hover;
-  opacity: 0.3;
 }

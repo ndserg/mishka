@@ -5,18 +5,18 @@
 
 .page-hader__wrapper {
   @media (min-width: @tablet-width) {
+    position: relative;
+    display: grid;
+    grid-template-columns: 320px 84px 264px;
     width: @tablet-width;
+    min-height: 88px;
     margin: 0 auto;
     padding-right: @tablet-padding;
     padding-left: @tablet-padding;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-height: 88px;
   }
 
   @media (min-width: @desktop-width) {
+    grid-template-columns: 420px 280px 84px 266px;
     width: @desktop-width;
   }
 }
@@ -35,14 +35,15 @@
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
+    width: 100%;
     height: auto;
+    margin: 0;
     padding: 0;
     box-shadow: none;
   }
 
   @media (min-width: @desktop-width) {
-    justify-content: center;
-    width: 280px;
+    padding-left: 30px;
   }
 }
 
@@ -100,8 +101,9 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 100%;
+    left: @tablet-padding;
     order: 4;
-    margin-top: 24px;
+    margin-top: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -115,7 +117,7 @@
   box-shadow: 0 1px 0 @lines-grey, inset 0 1px 0 @lines-grey;
 
   @media (min-width: @tablet-width) {
-    width: 82px;
+    width: 100%;
     box-shadow: none;
     border-right: 1px solid fade(@base-black, 10%);
     border-left: 1px solid fade(@base-black, 10%);
@@ -126,7 +128,7 @@
   box-shadow: 0 1px 0 @lines-grey, inset 0 1px 0 @lines-grey;
 
   @media (min-width: @tablet-width) {
-    width: 264px;
+    width: 100%;
     box-shadow: none;
   }
 }
@@ -138,7 +140,7 @@
     position: absolute;
     top: 100%;
     right: 50px;
-    margin-top: 24px;
+    margin-top: 21px;
     display: inline-block;
     order: 5;
     line-height: 24px;
@@ -152,8 +154,9 @@
     display: block;
     position: absolute;
     top: 100%;
+    left: @tablet-padding;
     order: 4;
     width: 350px;
-    margin-top: 24px;
+    margin-top: 19px;
   }
 }

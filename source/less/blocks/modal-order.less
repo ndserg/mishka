@@ -1,40 +1,122 @@
+.modal-order {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: fade(@base-white, 90%);
+}
+
+.modal-order__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 336px;
+  margin: auto;
+  padding-top: 28px;
+  padding-right: @mobile-padding;
+  padding-left: @mobile-padding;
+  text-align: center;
+  background-color: @base-white;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+    padding-top: 37px;
+    padding-right: 93px;
+    padding-left: 93px;
+
+    & br {
+      display: none;
+    }
+  }
+}
+
 .modal-order__title {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 25px;
   font-weight: bold;
+  line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 12px;
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .modal-order__action-text {
+  display: inline-block;
+  margin-bottom: 28px;
   font-size: 15px;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.modal-order__size-selectors {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
 }
 
 .modal-order__size-label {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 50px;
   font-size: 17px;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 52px;
+  vertical-align: middle;
   text-transform: uppercase;
+  border: 2px solid fade(@dark-grey, 10%);
+
+  @media (min-width: @tablet-width) {
+    width: 110px;
+  }
+
+  &:hover {
+    border-color: fade(@dark-grey, 30%);
+  }
+
+  .modal-order__size-selector:checked + & {
+    border-color: @green-underline;
+  }
 }
 
 .modal-order__button {
-  display: block;
-  min-height: 52px;
-  padding: 16px;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 20px;
   color: @base-white;
-  text-transform: uppercase;
   border: none;
   background-color: @base-green;
-}
 
-.modal-order__button:hover {
-  background-color: @dark-green-hover;
-}
+  @media (min-width: @tablet-width) {
+    width: 350px;
+    margin: 0 auto;
+  }
 
-.modal-order__button:active {
-  background-color: @dark-green-hover;
-  opacity: 0.3;
+  &:hover {
+    background-color: @dark-green-hover;
+  }
+
+  &:active {
+    background-color: @dark-green-hover;
+    opacity: 0.3;
+  }
 }
