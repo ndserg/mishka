@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мишка - интернет-магазин игрушек ручной работы</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="img/favicons/180.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
 </head>
 
 <body class="page-body">
@@ -81,10 +85,10 @@
           <fieldset class="form-group form-group__radio">
             <legend class="form-group__title">Тип</legend>
 
-            <input class="form-group__radio visually-hidden" type="radio" name="type" id="interior-accessories" checked>
+            <input class="form-group__radio visually-hidden" type="radio" name="type" id="interior-accessories" value="interior" checked>
             <label class="form-group__label label-radio" for="interior-accessories">Аксессуар для интерьера</label>
 
-            <input class="form-group__radio visually-hidden" type="radio" name="type" id="toy">
+            <input class="form-group__radio visually-hidden" type="radio" name="type" id="toy" value="toy">
             <label class="form-group__label label-radio" for="toy">Детская игрушка</label>
           </fieldset>
         </div>
@@ -218,6 +222,6 @@
     </div>
   </footer>
 
-  <script src="js/menu.js"></script>
+  <script src="js/menu.min.js"></script>
 </body>
 </html>
