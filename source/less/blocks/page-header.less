@@ -62,14 +62,14 @@
     top: 32px;
     width: 20px;
     height: 14px;
-    background-image: url("/img/icons/menu-open.svg");
+    background-image: url("/img/menu-open.svg");
   }
 
   &--close {
     top: 29px;
     width: 21px;
     height: 20px;
-    background-image: url("/img/icons/menu-close.svg");
+    background-image: url("/img/menu-close.svg");
   }
 
   &--nojs {
@@ -100,6 +100,7 @@
 .page-header__nav {
   @media (min-width: @tablet-width) {
     position: absolute;
+    z-index: 10;
     top: 100%;
     left: @tablet-padding;
     order: 4;
@@ -138,6 +139,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
+    z-index: 10;
     top: 100%;
     right: 50px;
     margin-top: 21px;
@@ -151,11 +153,12 @@
   display: none;
 
   @media (min-width: @desktop-width) {
-    display: block;
     position: absolute;
+    z-index: 10;
     top: 100%;
     left: @tablet-padding;
     order: 4;
+    display: block;
     width: 350px;
     margin-top: 19px;
   }

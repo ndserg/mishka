@@ -10,6 +10,29 @@
   }
 }
 
+.page-main > hr {
+  display: block;
+  width: 100%;
+  height: 6px;
+  margin-bottom: 30px;
+  background-image: url("/img/backgrounds/zigzag-line-mobile.png");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    height: 17px;
+    margin-bottom: 52px;
+    background-image: url("/img/backgrounds/zigzag-line-tablet.png");
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 23px;
+    margin-bottom: 70px;
+    background-image: url("/img/backgrounds/zigzag-line-desktop.png");
+  }
+}
+
 .page-main__header {
   margin-bottom: 31px;
   padding-top: 73px;
@@ -19,15 +42,36 @@
   background-position: 50% -18px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 52px;
+    position: relative;
+    margin-bottom: 42px;
     padding-top: 155px;
+    padding-bottom: 10px;
     background-image: url("/img/backgrounds/hero-desktop\ 2.jpg");
     background-position: 50% 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("/img/backgrounds/zigzag-fill-tablet.png");
+      background-repeat: repeat-x;
+      background-position: 0 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 71px;
+    margin-bottom: 56px;
+    padding-bottom: 15px;
     background-image: url("/img/backgrounds/hero-desktop\ 1.jpg");
+
+    &::after {
+      content: "";
+      height: 34px;
+      background-image: url("/img/backgrounds/zigzag-fill-desktop.png");
+    }
   }
 }
 
@@ -71,14 +115,14 @@
 }
 
 .page-main__top-sales {
-  margin-bottom: 72px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 125px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 163px;
+    margin-bottom: 70px;
   }
 }
 
@@ -87,29 +131,37 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 82px;
+    padding-top: 8px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 86px;
+    padding-top: 0;
     padding-right: @desktop-custom-padding;
     padding-left: @desktop-custom-padding;
   }
 }
 
 .page-main__reviews {
-  margin-bottom: 88px;
+  margin-bottom: 44px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 139px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 162px;
+    margin-bottom: 68px;
     padding-left: @desktop-custom-padding;
   }
 }
 
 .page-main__contacts {
+  padding-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+
   @media (min-width: @desktop-width) {
     padding-left: @desktop-custom-padding;
   }

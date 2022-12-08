@@ -148,30 +148,6 @@
     line-height: 52px;
   }
 
-  &--tel {
-    background-image: url("/img/icons/phone.svg");
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-
-    &:focus,
-    &:hover,
-    &:active {
-      background-image: url("/img/icons/phone-green.svg");
-    }
-  }
-
-  &--email {
-    background-image: url("/img/icons/email.svg");
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-
-    &:focus,
-    &:hover,
-    &:active {
-      background-image: url("/img/icons/email-green.svg");
-    }
-  }
-
   &::placeholder {
     color: fade(@base-black, 30%);
   }
@@ -208,6 +184,48 @@
   &:active,
   &:focus {
     box-shadow: inset 0 -2px 0 @green-underline;
+  }
+}
+
+.form-group__contact {
+  position: relative;
+  display: block;
+  height: 49px;
+  line-height: 49px;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+    line-height: 52px;
+  }
+}
+
+.form-group__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 100%;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+
+  @media (min-width: @tablet-width) {
+    width: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40px;
+  }
+
+  & svg {
+    fill: @base-black;
+    opacity: 0.2;
+  }
+
+  .form-group__text-field--contacts:hover + & svg,
+  .form-group__text-field--contacts:focus + & svg {
+    fill: @green-underline;
+    opacity: 1;
   }
 }
 
@@ -317,7 +335,7 @@
   }
 
   .form-group__checkbox:checked + &::before {
-    background-image: url("/img/icons/checkobox-checked.svg");
+    background-image: url("/img/checkobox-checked.svg");
     background-repeat: no-repeat;
     background-size: 23px, 16px;
     background-position: 50%, 50%;

@@ -31,20 +31,29 @@
 }
 
 .order-form__group {
-  margin-bottom: 29px;
+  margin-bottom: 19px;
+  padding-bottom: 10px;
+
+  &--checkbox {
+    margin-bottom: 17px;
+  }
+
+  &--user-data {
+    margin-bottom: 22px;
+  }
+
+  &--contacts {
+    margin-bottom: 26px;
+  }
 
   &:last-of-type {
-    margin-bottom: 13px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
     margin: 0;
     padding-top: 51px;
     padding-bottom: 50px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
 
     &:nth-of-type(even) {
       background-color: @light-grey;
