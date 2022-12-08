@@ -12,6 +12,7 @@ const uglify = require("gulp-uglify-es").default;
 const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const del = require("del");
+const { parallel } = require("gulp");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -23,11 +24,11 @@ const styles = () => {
     .pipe(less())
     .pipe(postcss([
       autoprefixer(),
-      //csso()
+      csso()
     ]))
     .pipe(sourcemap.write("."))
-    //.pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css"))
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -66,7 +67,7 @@ exports.icons = icons;
 // Wepp
 
 const createWebp = () => {
-  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/backgrounds/**/*.png"])
+  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/backgrounds/**/*.png", "!source/img/favicons/**/*.*"])
   .pipe(webp({quality: 80}))
   .pipe(gulp.dest("build/img"))
 }
@@ -97,12 +98,17 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
-// Copy
+// copy
 
 const copy = () => {
-  return gulp.src("source/img/**/*.svg",
-  {base: "source"})
-  .pipe(gulp.dest("build"))
+  return gulp.src([
+    "source/fonts/**/*.{woff2,woff}",
+    "source/*.ico",
+    "source/*.webmanifest"
+    ], {
+    base: "source"
+    })
+    .pipe(gulp.dest("build"))
 }
 
 exports.copy = copy;
@@ -120,7 +126,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -131,13 +137,49 @@ const server = (done) => {
 
 exports.server = server;
 
+// Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/**/*.js", gulp.series(scripts));
+  gulp.watch("source/*.html",  gulp.series(html, reload));
 }
 
+//Build
+
+const build = gulp.series(
+  clean,
+  parallel(
+    styles,
+    html,
+    scripts,
+    icons,
+    copy,
+    images,
+    createWebp
+  )
+)
+
+exports.build = build;
+
 exports.default = gulp.series(
-  styles, server, watcher
-);
+  clean,
+  parallel(
+    styles,
+    html,
+    scripts,
+    icons,
+    copy,
+    images,
+    createWebp
+  ),
+  gulp.series(
+    server, watcher
+  ));
