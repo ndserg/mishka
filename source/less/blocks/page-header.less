@@ -89,11 +89,23 @@
   }
 }
 
+@keyframes moveFromTop {
+  0% {transform: translateY(0);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
+
 .page-header__menu {
   @media (max-width: @mobile-width-max) {
     &--hide {
       display: none;
     }
+  }
+
+  &--open {
+    animation-name: moveFromTop;
+    animation-duration: 0.6s;
   }
 }
 
