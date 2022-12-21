@@ -67,9 +67,9 @@ exports.icons = icons;
 // Wepp
 
 const createWebp = () => {
-  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/backgrounds/**/*.png", "!source/img/favicons/**/*.*"])
+  return gulp.src(["source/img/products/*.jpg"])
   .pipe(webp({quality: 80}))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img/products"))
 }
 
 exports.createWebp = createWebp;
