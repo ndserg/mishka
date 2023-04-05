@@ -27,5 +27,5 @@ __[Проект On-Line](https://mishka.dendev.ru)__
 ### Скриншоты  
 ![Скриншот Главная](/screenshots/index-1.jpg)
 ![Скриншот Главная](/screenshots/index-2.jpg)
-![Скриншот Главная](/screenshots/catalog.jpg)
-![Скриншот Главная](/screenshots/form.jpg)
+![Скриншот каталог](/screenshots/catalog.jpg)
+![Скриншот форма](/screenshots/form.jpg)
