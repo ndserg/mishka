@@ -6,10 +6,11 @@ if (menuToggle.classList.contains(`page-header__toggle--nojs`)) {
   menuToggle.classList.remove(`page-header__toggle--nojs`);
   menuToggle.classList.add(`page-header__toggle--open`);
   toggleElements.forEach( (element) => element.classList.add(`page-header__menu--hide`));
-}
+};
 
-const menuToggleClickHandler = function(evt) {
+const menuToggleClickHandler = (evt) => {
   evt.preventDefault();
+
   if (menuToggle.classList.contains(`page-header__toggle--open`)) {
     menuToggle.classList.remove(`page-header__toggle--open`);
     menuToggle.classList.add(`page-header__toggle--close`);
@@ -24,8 +25,7 @@ const menuToggleClickHandler = function(evt) {
       element.classList.add(`page-header__menu--hide`)
       element.classList.remove(`page-header__menu--open`);
     });
-  }
-
-}
+  };
+};
 
 menuToggle.addEventListener(`click`, menuToggleClickHandler);

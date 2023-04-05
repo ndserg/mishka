@@ -10,7 +10,7 @@ let currentReview = 0;
 
 for (let i = 0; i < reviews.length; i++) {
   reviews[i].classList.contains(reviewCurrentClass) ? currentReview = i : false;
-}
+};
 
 const classToggler = (review) => {
   reviews[currentReview].classList.add(reviewHideClass);
@@ -19,21 +19,21 @@ const classToggler = (review) => {
   reviews[review].classList.add(reviewCurrentClass);
 
   currentReview = review;
-}
+};
 
-const prevButtonClickHandler = function(evt) {
+const prevButtonClickHandler = (evt) => {
   evt.preventDefault();
 
   const prevReview = (currentReview <= 0) ? reviews.length - 1 : currentReview - 1;
   classToggler(prevReview);
-}
+};
 
-const nextButtonClickHandler = function(evt) {
+const nextButtonClickHandler = (evt) => {
   evt.preventDefault();
 
   const nextReview = (currentReview >= reviews.length - 1) ? 0 : currentReview + 1;
   classToggler(nextReview);
-}
+};
 
 prevButton.addEventListener(`click`, prevButtonClickHandler);
 nextButton.addEventListener(`click`, nextButtonClickHandler);

@@ -9,10 +9,21 @@
 }
 
 @keyframes bounce {
-  0% {transform: translateY(-2000px);}
-  70% {transform: translateY(30px);}
-  90% {transform: translateY(-10px);}
-  100% {transform: translateY(0);}
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .modal-order__wrapper {
@@ -46,6 +57,30 @@
   &--show {
     animation-name: bounce;
     animation-duration: 0.6s;
+  }
+}
+
+.modal-order__close-button {
+  position: absolute;
+  right: @mobile-padding;
+  top: 29px;
+  width: 21px;
+  height: 20px;
+  font-size: 0;
+  line-height: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url("/img/menu-close.svg");
+  background-position: 50% 0;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
