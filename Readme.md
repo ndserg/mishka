@@ -22,8 +22,7 @@
 *   Сборка без запуска сервера (готовый проект для размещения на хостинге): `npm run build`
 
 __[Проект On-Line](https://mishka.dendev.ru)__  
-__[GitHub](https://github.com/ndserg/mishka)__  
-  
+
 ### Скриншоты  
 ![Скриншот Главная](/screenshots/index-1.jpg)
 ![Скриншот Главная](/screenshots/index-2.jpg)
