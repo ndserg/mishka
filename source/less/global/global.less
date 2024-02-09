@@ -34,13 +34,12 @@ img {
   padding-left: @mobile-padding;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
-    padding-right: @tablet-padding;
-    padding-left: @tablet-padding;
+    width: calc(@tablet-width - 100px);
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
+    width: calc(@desktop-width - 100px);
   }
 }
 
